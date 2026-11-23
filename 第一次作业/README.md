@@ -1,0 +1,5 @@
+路区182611304张雪琴
+本次作业完成了基础部分
+1.rm_f103_ledblink_HAL_Delay:外接LED以500ms周期闪烁，用HAL_Delay进行延时
+2.rm_f103_LEDblink_systick:外接LED以500ms周期闪烁，用systick回调函数进行计数从而达到延时目的
+3.rm_ledblink_keyandxiaodou:按键通过EXTI中断控制LED灯开关，通过定时读取连接按键的引脚信息，当引脚输入低电平且保持稳定20m时使连接LED的引脚翻转，LED亮起，从而达到消抖目的。

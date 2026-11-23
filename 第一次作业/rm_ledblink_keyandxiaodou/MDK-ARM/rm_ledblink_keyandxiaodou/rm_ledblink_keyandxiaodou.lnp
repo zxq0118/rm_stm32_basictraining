@@ -1,0 +1,22 @@
+--cpu Cortex-M3
+"rm_ledblink_keyandxiaodou\startup_stm32f103xb.o"
+"rm_ledblink_keyandxiaodou\main.o"
+"rm_ledblink_keyandxiaodou\gpio.o"
+"rm_ledblink_keyandxiaodou\stm32f1xx_it.o"
+"rm_ledblink_keyandxiaodou\stm32f1xx_hal_msp.o"
+"rm_ledblink_keyandxiaodou\stm32f1xx_hal_gpio_ex.o"
+"rm_ledblink_keyandxiaodou\stm32f1xx_hal.o"
+"rm_ledblink_keyandxiaodou\stm32f1xx_hal_rcc.o"
+"rm_ledblink_keyandxiaodou\stm32f1xx_hal_rcc_ex.o"
+"rm_ledblink_keyandxiaodou\stm32f1xx_hal_gpio.o"
+"rm_ledblink_keyandxiaodou\stm32f1xx_hal_dma.o"
+"rm_ledblink_keyandxiaodou\stm32f1xx_hal_cortex.o"
+"rm_ledblink_keyandxiaodou\stm32f1xx_hal_pwr.o"
+"rm_ledblink_keyandxiaodou\stm32f1xx_hal_flash.o"
+"rm_ledblink_keyandxiaodou\stm32f1xx_hal_flash_ex.o"
+"rm_ledblink_keyandxiaodou\stm32f1xx_hal_exti.o"
+"rm_ledblink_keyandxiaodou\system_stm32f1xx.o"
+--strict --scatter "rm_ledblink_keyandxiaodou\rm_ledblink_keyandxiaodou.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "rm_ledblink_keyandxiaodou.map" -o rm_ledblink_keyandxiaodou\rm_ledblink_keyandxiaodou.axf

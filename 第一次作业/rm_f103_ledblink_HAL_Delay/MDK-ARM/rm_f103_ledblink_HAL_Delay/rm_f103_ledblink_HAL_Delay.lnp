@@ -1,0 +1,22 @@
+--cpu Cortex-M3
+"rm_f103_ledblink_hal_delay\startup_stm32f103xb.o"
+"rm_f103_ledblink_hal_delay\main.o"
+"rm_f103_ledblink_hal_delay\gpio.o"
+"rm_f103_ledblink_hal_delay\stm32f1xx_it.o"
+"rm_f103_ledblink_hal_delay\stm32f1xx_hal_msp.o"
+"rm_f103_ledblink_hal_delay\stm32f1xx_hal_gpio_ex.o"
+"rm_f103_ledblink_hal_delay\stm32f1xx_hal.o"
+"rm_f103_ledblink_hal_delay\stm32f1xx_hal_rcc.o"
+"rm_f103_ledblink_hal_delay\stm32f1xx_hal_rcc_ex.o"
+"rm_f103_ledblink_hal_delay\stm32f1xx_hal_gpio.o"
+"rm_f103_ledblink_hal_delay\stm32f1xx_hal_dma.o"
+"rm_f103_ledblink_hal_delay\stm32f1xx_hal_cortex.o"
+"rm_f103_ledblink_hal_delay\stm32f1xx_hal_pwr.o"
+"rm_f103_ledblink_hal_delay\stm32f1xx_hal_flash.o"
+"rm_f103_ledblink_hal_delay\stm32f1xx_hal_flash_ex.o"
+"rm_f103_ledblink_hal_delay\stm32f1xx_hal_exti.o"
+"rm_f103_ledblink_hal_delay\system_stm32f1xx.o"
+--strict --scatter "rm_f103_ledblink_HAL_Delay\rm_f103_ledblink_HAL_Delay.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "rm_f103_ledblink_HAL_Delay.map" -o rm_f103_ledblink_HAL_Delay\rm_f103_ledblink_HAL_Delay.axf
