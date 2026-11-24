@@ -43,7 +43,8 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-volatile uint32_t key_edge_count=0U;
+//volatile uint32_t key_edge_count=0U;
+volatile uint8_t key_flag=0;
 
 /* USER CODE END PV */
 
@@ -99,23 +100,29 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-		uint32_t now=HAL_GetTick();
-		if((uint32_t)(now-scan_last)>=1U)
-		{
-			scan_last=now;
-			GPIO_PinState level=HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_1);
-			if(level!=candidate_level){
-				candidate_level=level;
-				candidate_since=now;
-			}else if(level!=stable_level&&(uint32_t)(now-candidate_since)>=20U)
-			{
-				stable_level=level;
-				if(stable_level==GPIO_PIN_RESET)
-				{
-					HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_0);
-				}
+//		uint32_t now=HAL_GetTick();
+//		if((uint32_t)(now-scan_last)>=1U)
+//		{
+//			scan_last=now;
+//			GPIO_PinState level=HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_1);
+//			if(level!=candidate_level){
+//				candidate_level=level;
+//				candidate_since=now;
+//			}else if(level!=stable_level&&(uint32_t)(now-candidate_since)>=20U)
+//			{
+//				stable_level=level;
+//				if(stable_level==GPIO_PIN_RESET)
+//				{
+//					HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_0);
+//				}
+//			}
+		if(key_flag==1){
+			HAL_Delay(20);
+			if(HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_1)==GPIO_PIN_RESET){
+				HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_1);
 			}
-		}
+			key_flag=0;
+				
 				
 				
 				
@@ -171,7 +178,8 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
 	if(GPIO_Pin==GPIO_PIN_1)
 	{
-		key_edge_count++;
+	//	key_edge_count++;
+		key_flag=1;
 	}
 }
 
