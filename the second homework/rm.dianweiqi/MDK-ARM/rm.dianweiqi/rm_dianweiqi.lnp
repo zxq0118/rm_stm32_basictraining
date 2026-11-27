@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"rm.dianweiqi\startup_stm32f103xb.o"
+"rm.dianweiqi\main.o"
+"rm.dianweiqi\gpio.o"
+"rm.dianweiqi\adc.o"
+"rm.dianweiqi\stm32f1xx_it.o"
+"rm.dianweiqi\stm32f1xx_hal_msp.o"
+"rm.dianweiqi\stm32f1xx_hal_gpio_ex.o"
+"rm.dianweiqi\stm32f1xx_hal_adc.o"
+"rm.dianweiqi\stm32f1xx_hal_adc_ex.o"
+"rm.dianweiqi\stm32f1xx_hal.o"
+"rm.dianweiqi\stm32f1xx_hal_rcc.o"
+"rm.dianweiqi\stm32f1xx_hal_rcc_ex.o"
+"rm.dianweiqi\stm32f1xx_hal_gpio.o"
+"rm.dianweiqi\stm32f1xx_hal_dma.o"
+"rm.dianweiqi\stm32f1xx_hal_cortex.o"
+"rm.dianweiqi\stm32f1xx_hal_pwr.o"
+"rm.dianweiqi\stm32f1xx_hal_flash.o"
+"rm.dianweiqi\stm32f1xx_hal_flash_ex.o"
+"rm.dianweiqi\stm32f1xx_hal_exti.o"
+"rm.dianweiqi\system_stm32f1xx.o"
+--strict --scatter "rm.dianweiqi\rm_dianweiqi.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "rm_dianweiqi.map" -o rm.dianweiqi\rm_dianweiqi.axf
