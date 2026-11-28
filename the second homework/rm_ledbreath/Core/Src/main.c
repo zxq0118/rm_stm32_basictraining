@@ -97,13 +97,13 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-		for( i=0;i<20000;i++){
+		for( i=0;i<1000;i++){
 		__HAL_TIM_SET_COMPARE(&htim3,TIM_CHANNEL_1,i);
-			HAL_Delay(10);
+			HAL_Delay(1);
 		}
-		for(i=19999;i>=0;i--){
+		for(i=999;i>=0;i--){
 			__HAL_TIM_SET_COMPARE(&htim3,TIM_CHANNEL_1,i);
-			HAL_Delay(10);
+			HAL_Delay(1);
 		}
     /* USER CODE END WHILE */
 
